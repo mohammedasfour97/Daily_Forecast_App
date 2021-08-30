@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical"
+            android:padding="@dimen/_5sdp">
+
+            <EditText
+                android:id="@+id/search_bar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".75"
+                android:textSize="18sp"
+                android:background="@drawable/white_solid_gray_stroke_10"
+                android:hint="@string/search_city_bar_txt"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                style="@style/Regular_Default_TextView_style"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"/>
+
+            <ImageView
+                android:id="@+id/searchIcon"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:src="@drawable/ic_baseline_search_24"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <ImageView
+            android:id="@+id/mainFillImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_splash"/>
+
+       <include
+           android:id="@+id/weatherRecycler"
+           android:layout_height="wrap_content"
+           android:layout_width="match_parent"
+           android:visibility="gone"
+           layout="@layout/recycler"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>
